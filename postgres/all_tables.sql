@@ -8,8 +8,7 @@ CREATE TABLE classifiers (
     minProbabilility real,
     name text,
     status int,
-    published timestamp,
-    useFixedForms boolean
+    published timestamp
 );
 
 CREATE TABLE metricses (
