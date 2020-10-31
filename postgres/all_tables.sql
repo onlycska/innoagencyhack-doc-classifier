@@ -108,5 +108,5 @@ CREATE TABLE extracteddata (
 CREATE TABLE image(
     url text,
     dataId bigint,
-    FOREIGN KEY (extracteddata) REFERENCES extracteddata(dataId) ON DELETE CASCADE
+    FOREIGN KEY (dataId) REFERENCES extracteddata(dataId) ON DELETE CASCADE
 );
