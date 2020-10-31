@@ -1,5 +1,3 @@
- CREATE DATABASE AI;
-
 CREATE SCHEMA public;
 
 CREATE TABLE classifiers (
