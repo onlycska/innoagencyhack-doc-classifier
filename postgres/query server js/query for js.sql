@@ -8,3 +8,8 @@ RETURNING idusers;
 INSERT INTO postgres.public.image (url, recordid)
 VALUES
 ('url', 'id');
+
+--get user
+SELECT postgres.public.users.username 
+FROM users
+WHERE username LIKE '%username%';
