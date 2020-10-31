@@ -98,21 +98,15 @@ CREATE TABLE refreshtokens (
 );
 
 --текст со сканов
-CREATE TABLE record (
-    recordId bigserial NOT NULL UNIQUE PRIMARY KEY,
-    textValue text,
-    categoryId bigint
-);
-
---классификации документов
-CREATE TABLE category (
-    categoryId bigserial NOT NULL UNIQUE PRIMARY KEY,
-    name text
+CREATE TABLE extracteddata (
+    dataId bigserial NOT NULL UNIQUE PRIMARY KEY,
+    valueData text,
+    documentType text
 );
 
 --хранение картинок
 CREATE TABLE image(
     url text,
-    recordId bigint,
-    FOREIGN KEY (recordId) REFERENCES record(recordId)
+    dataId bigint,
+    FOREIGN KEY (extracteddata) REFERENCES extracteddata(dataId) ON DELETE CASCADE
 );
