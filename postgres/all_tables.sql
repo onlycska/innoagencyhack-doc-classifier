@@ -65,7 +65,7 @@ CREATE TABLE classificationResults (
     classifield timestamp,
     classifierId bigint, --key
     classifierModelId bigint, --key
-    duretion real,
+    duration real,
     error text,
     --expectedClassId bigint,
     --predictedClassId bigint,
