@@ -5,7 +5,7 @@ CREATE TABLE classifiers (
     autoPublish boolean,
     --publishedModelId bigint,
     created timestamp,
-    minProbablility real,
+    minProbabilility real,
     name text,
     status int,
     published timestamp,
