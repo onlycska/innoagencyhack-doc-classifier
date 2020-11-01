@@ -14,7 +14,7 @@ SELECT postgres.public.users.username
 FROM users
 WHERE username LIKE '%username%';
 
---search by state
+--search record by state
 SELECT postgres.public.extracteddata.status 
 FROM extracteddata
 WHERE status LIKE '%status%';
@@ -30,7 +30,7 @@ SELECT public.extracteddata.valuedata
 FROM extracteddata
 WHERE idusers = 'idusersInteger';
 
---get record 
+--search record 
 SELECT valuedata
 FROM extracteddata
 WHERE to_tsvector('russian', 'querySearchByName');
