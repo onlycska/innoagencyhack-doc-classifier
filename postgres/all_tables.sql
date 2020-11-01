@@ -100,7 +100,8 @@ CREATE TABLE refreshtokens (
 CREATE TABLE extracteddata (
     dataId bigserial NOT NULL UNIQUE PRIMARY KEY,
     valueData text,
-    documentType text
+    documentType text,
+    status int
 );
 
 --хранение картинок
