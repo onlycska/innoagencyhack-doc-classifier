@@ -18,3 +18,9 @@ WHERE username LIKE '%username%';
 SELECT postgres.public.extracteddata.status 
 FROM extracteddata
 WHERE status LIKE '%status%';
+
+--add valuedata, status, idusers and returning dataid
+INSERT INTO postgres.public.extracteddata (valuedata, status, idusers)
+VALUES
+('valuedataText', 'statusInteger', 'iduserBiginteger')
+RETURNING dataid;
