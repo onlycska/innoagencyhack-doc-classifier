@@ -24,3 +24,8 @@ INSERT INTO postgres.public.extracteddata (valuedata, status, idusers)
 VALUES
 ('valuedataText', 'statusInteger', 'iduserBiginteger')
 RETURNING dataid;
+
+--get all recording user by iduser
+SELECT public.extracteddata.valuedata
+FROM extracteddata
+WHERE idusers = 'idusersInteger';
