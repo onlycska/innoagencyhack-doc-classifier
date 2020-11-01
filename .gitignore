@@ -1,4 +1,5 @@
 ﻿.idea
+<<<<<<< HEAD
 logs
 venv
 preprocessing/__pycache__
@@ -8,4 +9,9 @@ dlnlputils/data/__pycache__
 dlnlputils/__pycache__
 model/__pycache__
 postprocessing/__pycache__
+=======
+venv
+dlnlputils/data/__pycache__
+dlnlputils/__pycache__
+>>>>>>> 6a56619... app creation
 __pycache__
