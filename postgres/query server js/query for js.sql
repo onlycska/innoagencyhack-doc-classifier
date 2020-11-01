@@ -29,3 +29,8 @@ RETURNING dataid;
 SELECT public.extracteddata.valuedata
 FROM extracteddata
 WHERE idusers = 'idusersInteger';
+
+--get record 
+SELECT valuedata
+FROM extracteddata
+WHERE to_tsvector('russian', 'querySearchByName');
