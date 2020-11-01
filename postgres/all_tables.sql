@@ -101,6 +101,7 @@ CREATE TABLE extracteddata (
     dataId bigserial NOT NULL UNIQUE PRIMARY KEY,
     valueData text,
     documentType text,
+    documentName text,
     status int,
     idUsers bigint,
     FOREIGN KEY (idusers) REFERENCES users(idusers);
