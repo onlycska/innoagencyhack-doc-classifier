@@ -5,7 +5,7 @@ VALUES
 RETURNING idusers;
 
 --add image
-INSERT INTO postgres.public.image (url, recordid)
+INSERT INTO postgres.public.image (url, dataid)
 VALUES
 ('url', 'id');
 
@@ -34,3 +34,8 @@ WHERE idusers = 'idusersInteger';
 SELECT valuedata
 FROM extracteddata
 WHERE to_tsvector('russian', 'querySearchByName');
+
+--search url image by id record
+SELECT postgres.public.image.url
+FROM image
+WHERE dataid = 'dataidBiginteger';
