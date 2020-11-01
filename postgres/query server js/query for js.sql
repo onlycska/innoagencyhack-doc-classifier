@@ -13,3 +13,8 @@ VALUES
 SELECT postgres.public.users.username 
 FROM users
 WHERE username LIKE '%username%';
+
+--search by state
+SELECT postgres.public.extracteddata.status 
+FROM extracteddata
+WHERE status LIKE '%status%';
