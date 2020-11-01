@@ -5,11 +5,10 @@ CREATE TABLE classifiers (
     autoPublish boolean,
     --publishedModelId bigint,
     created timestamp,
-    minProbablility real,
+    minProbabilility real,
     name text,
     status int,
-    published timestamp,
-    useFixedForms boolean
+    published timestamp
 );
 
 CREATE TABLE metricses (
@@ -65,7 +64,7 @@ CREATE TABLE classificationResults (
     classifield timestamp,
     classifierId bigint, --key
     classifierModelId bigint, --key
-    duretion real,
+    duration real,
     error text,
     --expectedClassId bigint,
     --predictedClassId bigint,
@@ -98,21 +97,18 @@ CREATE TABLE refreshtokens (
 );
 
 --текст со сканов
-CREATE TABLE record (
-    recordId bigserial NOT NULL UNIQUE PRIMARY KEY,
-    textValue text,
-    categoryId bigint
-);
-
---классификации документов
-CREATE TABLE category (
-    categoryId bigserial NOT NULL UNIQUE PRIMARY KEY,
-    name text
+CREATE TABLE extracteddata (
+    dataId bigserial NOT NULL UNIQUE PRIMARY KEY,
+    valueData text,
+    documentType text,
+    status int,
+    idUsers bigint,
+    FOREIGN KEY (idusers) REFERENCES users(idusers);
 );
 
 --хранение картинок
 CREATE TABLE image(
     url text,
-    recordId bigint,
-    FOREIGN KEY (recordId) REFERENCES record(recordId)
+    dataId bigint,
+    FOREIGN KEY (dataId) REFERENCES extracteddata(dataId) ON DELETE CASCADE
 );
